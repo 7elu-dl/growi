@@ -33,7 +33,7 @@ const PageManagement = (props) => {
     return (
       <>
         <div className="dropdown-divider"></div>
-        <a className="dropdown-item" href="#" data-target="#deletePage" data-toggle="modal">
+        <a className="dropdown-item" href="#" type="button" onClick={appContainer.openPageDeleteModal}>
           <i className="icon-fw icon-fire text-danger"></i> { t('Delete') }
         </a>
       </>

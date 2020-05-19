@@ -36,6 +36,8 @@ export default class AppContainer extends Container {
       isDrawerOpened: false,
 
       isPageCreateModalShown: false,
+      isPageDeleteModalShown: false,
+      isPagePutBackModalShown: false,
 
       recentlyUpdatedPages: [],
     };
@@ -98,6 +100,10 @@ export default class AppContainer extends Container {
 
     this.openPageCreateModal = this.openPageCreateModal.bind(this);
     this.closePageCreateModal = this.closePageCreateModal.bind(this);
+    this.openPageDeleteModal = this.openPageDeleteModal.bind(this);
+    this.closePageDeleteModal = this.closePageDeleteModal.bind(this);
+    this.openPagePutBackModal = this.openPagePutBackModal.bind(this);
+    this.closePagePutBackModal = this.closePagePutBackModal.bind(this);
   }
 
   /**
@@ -476,6 +482,22 @@ export default class AppContainer extends Container {
 
   closePageCreateModal() {
     this.setState({ isPageCreateModalShown: false });
+  }
+
+  openPageDeleteModal() {
+    this.setState({ isPageDeleteModalShown: true });
+  }
+
+  closePageDeleteModal() {
+    this.setState({ isPageDeleteModalShown: false });
+  }
+
+  openPagePutBackModal() {
+    this.setState({ isPagePutBackModalShown: true });
+  }
+
+  closePagePutBackModal() {
+    this.setState({ isPagePutBackModalShown: false });
   }
 
 }
