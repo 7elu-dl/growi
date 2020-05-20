@@ -12,6 +12,12 @@
 // $light: #;
 // $dark: #;
 
+.grw-navbar {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  border-image-slice: 1;
+}
+
 //== Light Mode
 //
 html[light] {
@@ -19,7 +25,9 @@ html[light] {
 
   // Background colors
   $bgcolor-global: white;
-  $bgcolor-navbar: #334455;
+  $bgcolor-navbar: #2a2929; //navbar
+  $bgcolor-sidebar: #122c55; //sidebar
+  $bgcolor-sidebar-context: #f4f6fc; //sidebar-context
   $bgcolor-inline-code: #f9f2f4;
   $bgcolor-card: #f5f5f5;
 
@@ -66,9 +74,9 @@ html[light] {
   $color-badge: $color-reversal;
 
   // Sidebar
-  $bgcolor-sidebar: $bgcolor-navbar;
-  $color-sidebar-context: $color-global;
-  $bgcolor-sidebar-context: darken($bgcolor-global, 10%);
+  $bgcolor-sidebar: #122c55;
+  $color-sidebar-context: #122c55;
+  $bgcolor-sidebar-context: #f4f6fc;
 
   @import 'apply-colors';
   @import 'apply-colors-light';
@@ -129,10 +137,10 @@ html[dark] {
   // badge
   $color-badge: $color-reversal;
 
-  // Sidebar
-  $bgcolor-sidebar: $bgcolor-navbar;
-  $color-sidebar-context: $color-global;
-  $bgcolor-sidebar-context: lighten($bgcolor-navbar, 5%);
+  //Sidebar
+  $bgcolor-sidebar: #122c55;
+  $color-sidebar-context: #f4f6fc;
+  $bgcolor-sidebar-context: #f4f6fc;
 
   @import 'apply-colors';
   @import 'apply-colors-dark';
